@@ -1,2 +1,2 @@
-# PBPlatzi (Clase 8)
+# PBPlatzi
 Seguimiento del código del Curso de Programación Básica de Platzi.com.
