@@ -8,38 +8,9 @@
 		<h1>Tu peso en otro planeta</h1>
 		<p>En la Tierra pesas distinto que en Marte o Júpiter</p>
 		<script type="text/javascript" src="js/utiles.js"></script>
-		<script type="text/javascript">
-		// Declaración de variables
-		var peso, gTierra, gMarte, gJupiter, pesoFinal, opt;
-
-		// Inicialización de variables
-		peso = parseFloat(prompt("¿Cuál es tu peso?"));
-		gTierra = 9.8;
-		gMarte = 3.7;
-		gJupiter = 24.8;
-
-		// Leer opción
-		opt = parseInt(prompt("Elige tu planeta\n1 para Marte y 2 para Júpiter"));
-
-		// Alternativa
-		switch (opt) {
-			case 1:
-				// Calcular el peso del usuario en Marte
-				pesoFinal = pesoPlaneta(peso, gMarte);
-				break;
-			case 2:
-				// Calcular el peso del usuario en Júpiter
-				pesoFinal = pesoPlaneta(peso, gJupiter);
-				break;
-			default:
-				document.write("<strong>ERROR</strong>\n<br>La opción elegida no es correcta.</br>");
-				break;
-		}
-
-		// Mostrar el peso final del usuario
-		if(pesoFinal!=null) {
-			document.write("Tu peso es de " + "<strong>" + pesoFinal + "kg" + "</strong>" + ".");
-		}
+		<script type="text/javascript" src="js/principal.js">></script>
+		<script>
+			principal(); // Ejecuta toda la lógica del algoritmo principal
 		</script>
 	</body>
 </html>
