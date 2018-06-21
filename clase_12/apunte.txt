@@ -1,0 +1,1 @@
+Canvas. Los Canvas funciona como un eje de coordenadas.
