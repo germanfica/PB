@@ -7,6 +7,7 @@ function principal() {
   gTierra = 9.8;
   gMarte = 3.7;
   gJupiter = 24.8;
+  nombrePlaneta = "";
 
   // Leer opción
   opt = parseInt(prompt("Elige tu planeta\n1 para Marte y 2 para Júpiter"));
