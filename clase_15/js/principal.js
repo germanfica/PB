@@ -3,13 +3,13 @@ function mostrarDibujo() {
   var dibujo, lienzo, alturaDelDibujito, color, cantLineas, op;
 
   // Inicialización de variables
-  dibujo = document.getElementById("dibujito");
+  dibujo = document.getElementById("id_dibujo");
   alturaDelDibujito = dibujo.height;
   lienzo = dibujo.getContext("2d"); // Área de dibujo, el lienzo es nuestro papel
 
   // Leer los datos de los campos de textos ingresados por el usuario
-  color = document.getElementById("color").value;
-  cantLineas = document.getElementById("cantLineas").value;
+  color = document.getElementById("id_color").value;
+  cantLineas = document.getElementById("id_cantLineas").value;
 
   // Calcular la cantidad de lineas a dibujar
   op = alturaDelDibujito/cantLineas;
