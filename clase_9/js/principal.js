@@ -1,12 +1,17 @@
+// Declaración de variables
+var gTierra, gMarte, gJupiter;
+
+// Inicialización de variables
+gTierra = 9.8;
+gMarte = 3.7;
+gJupiter = 24.8;
+
 function principal() {
   // Declaración de variables
-  var peso, gTierra, gMarte, gJupiter, pesoFinal, opt, nombrePlaneta;
+  var peso, pesoFinal, opt, nombrePlaneta;
 
   // Inicialización de variables
   peso = parseFloat(prompt("¿Cuál es tu peso?"));
-  gTierra = 9.8;
-  gMarte = 3.7;
-  gJupiter = 24.8;
   nombrePlaneta = "";
 
   // Leer opción
