@@ -1,4 +1,4 @@
-// Declaración de variables
+// Declaración de variables; dibujo y lienzo son variables de ámbito, ya que las voy a utilizar en otras funciones no sólo en una.
 var dibujo, lienzo, boton;
 
 // Inicialización de variables
