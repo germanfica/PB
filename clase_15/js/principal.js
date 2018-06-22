@@ -1,16 +1,20 @@
-// #504ed8
 function mostrarDibujo() {
   // Declaración de variables
-  var d, lienzo, alturaDelDibujito, color, cantLineas, op;
+  var dibujo, lienzo, alturaDelDibujito, color, cantLineas, op;
 
   // Inicialización de variables
-  d = document.getElementById("dibujito");
-  lienzo = d.getContext("2d"); // Área de dibujo, el lienzo es nuestro papel
-  alturaDelDibujito = d.height;
+  dibujo = document.getElementById("dibujito");
+  alturaDelDibujito = dibujo.height;
+  lienzo = dibujo.getContext("2d"); // Área de dibujo, el lienzo es nuestro papel
+
+  // Leer los datos de los campos de textos ingresados por el usuario
   color = document.getElementById("color").value;
   cantLineas = document.getElementById("cantLineas").value;
+
+  // Calcular la cantidad de lineas a dibujar
   op = alturaDelDibujito/cantLineas;
 
+  // Dibujar, me gusta este color: #504ed8
   for (var i = 0; i <= alturaDelDibujito/op; i=i+1) {
     dibujarLinea(color, 0, i*op, i*op, alturaDelDibujito, 0.9, lienzo);
 
