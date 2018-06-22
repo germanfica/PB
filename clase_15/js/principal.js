@@ -10,7 +10,7 @@ boton = document.getElementById("id_boton");
 boton.addEventListener("click", mostrarDibujo);
 
 // Dibujar caja
-dibujarCaja("black", alturaDelDibujito);
+dibujarCaja("black", dibujo.height);
 
 function mostrarDibujo() {
   // Declaración de variables
