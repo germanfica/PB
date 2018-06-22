@@ -14,6 +14,9 @@ function mostrarDibujo() {
   // Calcular la cantidad de lineas a dibujar
   op = alturaDelDibujito/cantLineas;
 
+  // Limpieza del lienzo
+  lienzo.clearRect(0, 0, dibujo.width, dibujo.height);
+
   // Dibujar, me gusta este color: #504ed8
   for (var i = 0; i <= alturaDelDibujito/op; i=i+1) {
     dibujarLinea(color, 0, i*op, i*op, alturaDelDibujito, 0.9, lienzo);
