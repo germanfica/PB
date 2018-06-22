@@ -9,6 +9,9 @@ boton = document.getElementById("id_boton");
 // Generar un escuchador de eventos para el boton
 boton.addEventListener("click", mostrarDibujo);
 
+// Dibujar caja
+dibujarCaja(color, alturaDelDibujito);
+
 function mostrarDibujo() {
   // Declaración de variables
   var alturaDelDibujito, color, cantLineas, op;
