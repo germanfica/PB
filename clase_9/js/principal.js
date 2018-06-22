@@ -33,12 +33,13 @@ function principal() {
       nombrePlaneta = "Júpiter";
       break;
     default:
+      nombrePlaneta = "Desconocido";
       document.write("<strong>ERROR</strong>\n<br>La opción elegida no es correcta.</br>");
       break;
   }
 
   // Mostrar el peso final del usuario
-  if(pesoFinal!=1 || pesoFinal!=2) {
+  if(nombrePlaneta!="Desconocido") {
     document.write("Tu peso en "+ nombrePlaneta + " es de <strong>" + pesoFinal + "kg" + "</strong>" + ".");
   }
 }
