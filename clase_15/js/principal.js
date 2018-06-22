@@ -1,3 +1,12 @@
+// Declaración de variables
+var boton;
+
+// Inicialización de variables
+boton = document.getElementById("id_boton");
+
+// Generar un escuchador de eventos para el boton
+boton.addEventListener("click", mostrarDibujo);
+
 function mostrarDibujo() {
   // Declaración de variables
   var dibujo, lienzo, alturaDelDibujito, color, cantLineas, op;
