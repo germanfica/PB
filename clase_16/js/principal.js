@@ -19,7 +19,7 @@ document.addEventListener("keyup", dibujarTeclado);
 
 // addEventListener almacena toda la información en 'evento'
 function dibujarTeclado(evento) {
-  var color = "own";
+  var color = "brown";
   var movimiento = 10;
   switch (evento.keyCode) {
     case teclas.UP:
