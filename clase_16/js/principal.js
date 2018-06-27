@@ -1,5 +1,5 @@
 // Declaración de variables
-var dibujo, lienzo, teclas, alturaDibujo;
+var dibujo, lienzo, teclas, alturaDibujo, x, y;
 
 // Inicialización de variables
 dibujo = document.getElementById("area_de_dibujo");
@@ -11,28 +11,33 @@ teclas = {
  LEFT: 37,
  RIGHT: 39
 };
+x = 150;
+y = 150;
 
 // Detectar tecla y ejecutar una función
 document.addEventListener("keyup", dibujarTeclado);
 
 // addEventListener almacena toda la información en 'evento'
 function dibujarTeclado(evento) {
+  var color = "own";
+  var movimiento = 10;
   switch (evento.keyCode) {
     case teclas.UP:
       //console.log(evento.key);
-      dibujarLinea("black", 1, 1, 1, 80, 1);
-      //dibujarLinea("black", 1, 1, alturaDibujo-1, 1, 1);
-      //dibujarLinea("black", alturaDibujo-1, 1, alturaDibujo-1, alturaDibujo-1, 1);
-      //dibujarLinea("black", alturaDibujo-1, alturaDibujo-1, 1, alturaDibujo-1, 1);
+      dibujarLinea(color, x, y, x, y-movimiento, 3);
+      y=y-movimiento;
       break;
     case teclas.DOWN:
-      console.log(evento.key);
+      dibujarLinea(color, x, y, x, y+movimiento, 3);
+      y=y+movimiento;
       break;
     case teclas.LEFT:
-      console.log(evento.key);
+      dibujarLinea(color, x, y, x-movimiento, y, 3);
+      x=x-movimiento;
       break;
     case teclas.RIGHT:
-      console.log(evento.key);
+      dibujarLinea(color, x, y, x+movimiento, y, 3);
+      x=x+movimiento;
       break;
     default:
     break;
