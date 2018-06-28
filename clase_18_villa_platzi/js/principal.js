@@ -1,5 +1,7 @@
-// Mostrar por consola la nueva posición generada
-console.log(aleatorio(0, 500));
+// Mostrar por pantalla la nueva posición
+for (var i = 0; i <= 10; i++) {
+  document.write("La nueva posición generada es: " + aleatorio(0, 500) + "<br/>");
+}
 
 /**
  * Devuelve una posición aleatoria dentro de
@@ -8,14 +10,12 @@ console.log(aleatorio(0, 500));
  */
 function aleatorio(min, max) {
   // Declaración de variables
-  var random, posicionNueva;
-
-  // Inicialización de variables
-  random = Math.random();
+  var pos;
 
   // Generar una nueva posición de manera aleatoria
-  posicionNueva=Math.floor(random/(1/(max-min)))+min;
+  //
+  pos=Math.floor(Math.random()/(1/(max-min)))+min;
 
   // Retorna la nueva posición
-  return posicionNueva;
+  return pos;
 }
