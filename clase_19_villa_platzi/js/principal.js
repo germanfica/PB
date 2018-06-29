@@ -1,51 +1,79 @@
 // Declaración de variables
-var vp, lienzo, fondoDibujado;
+var vp, lienzo;
 
 // Incicialización de variables
  vp = document.getElementById("villaplatzi");
  lienzo = vp.getContext("2d");
- fondoDibujado = false;
-
-var vaca = {
-  url: "vaca.png",
-  cargaOK: false
-};
 
 // Creación del fondo
-var fondo = new Image();
-fondo.src = "images/tile.png";
-fondo.addEventListener("onload", dibujarFondo);
+var fondo = {
+  url: "images/tile.png",
+  cargaOK: false
+};
+fondo.imagen = new Image();
+fondo.imagen.src = fondo.url;
+fondo.imagen.addEventListener("load", cargarFondo);
 
 // Creación de la vaca
-var vaca = new Image();
-vaca.src = "images/vaca.png"
-vaca.addEventListener("load", dibujarVaca);
+var vaca = {
+  url: "images/vaca.png",
+  cargaOK: false
+};
+vaca.imagen = new Image();
+vaca.imagen.src = vaca.url;
+vaca.imagen.addEventListener("load", cargarVaca);
 
 // Creación del cerdo
-var cerdo = new Image();
-cerdo.src = "images/cerdo.png"
-cerdo.addEventListener("load", dibujarCerdo);
+var cerdo = {
+  url: "images/cerdo.png",
+  cargaOK: false
+};
+cerdo.imagen = new Image();
+cerdo.imagen.src = cerdo.url;
+cerdo.imagen.addEventListener("load", cargarCerdo);
 
 // Creación del pollo
-var pollo = new Image();
-pollo.src = "images/pollo.png"
-pollo.addEventListener("load", dibujarPollo);
+var pollo = {
+  url: "images/pollo.png",
+  cargaOK: false
+};
+pollo.imagen = new Image();
+pollo.imagen.src = pollo.url;
+pollo.imagen.addEventListener("load", cargarPollo);
 
-function dibujarFondo(evento) {
-  lienzo.drawImage(fondo, 0, 0);
-  fondoDibujado = true;
+function cargarFondo() {
+  fondo.cargaOK = true;
+  dibujar();
 }
 
-function dibujarVaca() {
-  lienzo.drawImage(vaca, aleatorio(0,420), aleatorio(0,420));
+function cargarVaca() {
+  vaca.cargaOK = true;
+  dibujar();
 }
 
-function dibujarCerdo() {
-  lienzo.drawImage(cerdo, aleatorio(0,420), aleatorio(0,420));
+function cargarCerdo() {
+  cerdo.cargaOK = true;
+  dibujar();
 }
 
-function dibujarPollo() {
-  lienzo.drawImage(pollo, aleatorio(0,420), aleatorio(0,420));
+function cargarPollo() {
+  pollo.cargaOK = true;
+  dibujar();
+}
+
+function dibujar() {
+  if(fondo.cargaOK)
+    lienzo.drawImage(fondo.imagen, 0, 0);
+  if(vaca.cargaOK)
+    for (var i = 0; i <= aleatorio(3,9); i++) {
+      lienzo.drawImage(vaca.imagen, aleatorio(0,420), aleatorio(0,420));
+    }
+  if(cerdo.cargaOK)
+    lienzo.drawImage(cerdo.imagen, aleatorio(0,420), aleatorio(0,420));
+  if(pollo.cargaOK)
+    for (var i = 0; i < aleatorio(3,9); i++) {
+      lienzo.drawImage(pollo.imagen, aleatorio(0,420), aleatorio(0,420));
+    }
 }
 
 /**
