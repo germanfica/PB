@@ -1,10 +1,10 @@
 // Declaración de variables
-var teclas, alturaDibujo, x, y, personaje, lienzoPersonaje;
+var personaje, lienzoPersonaje;
+var teclas, x, y;
 
 // Inicialización de variables
 personaje = document.getElementById("personaje");
 lienzoPersonaje = personaje.getContext("2d");
-alturaDibujo = personaje.height;
 teclas = {
  UP: 38,
  DOWN: 40,
@@ -27,50 +27,32 @@ function dibujarPersonaje(evento) {
 
   switch (evento.keyCode) {
     case teclas.UP:
-      //console.log(evento.key);
       limpiarLienzoPersonaje();
       if(cerdo.cargaOK)
         lienzoPersonaje.drawImage(cerdo.imagen, x, y-movimiento);
-      //dibujarLinea(color, x, y, x, y-movimiento, 3);
       y=y-movimiento;
       break;
     case teclas.DOWN:
       limpiarLienzoPersonaje();
       if(cerdo.cargaOK)
         lienzoPersonaje.drawImage(cerdo.imagen, x, y+movimiento);
-      //dibujarLinea(color, x, y, x, y+movimiento, 3);
       y=y+movimiento;
       break;
     case teclas.LEFT:
       limpiarLienzoPersonaje();
       if(cerdo.cargaOK)
         lienzoPersonaje.drawImage(cerdo.imagen, x-movimiento, y);
-      //dibujarLinea(color, x, y, x-movimiento, y, 3);
       x=x-movimiento;
       break;
     case teclas.RIGHT:
       limpiarLienzoPersonaje();
       if(cerdo.cargaOK)
         lienzoPersonaje.drawImage(cerdo.imagen, x+movimiento, y);
-      //dibujarLinea(color, x, y, x+movimiento, y, 3);
       x=x+movimiento;
       break;
     default:
     break;
   }
-  //console.log(evento.keyCode);
-}
-
-function dibujarLinea(color, xInicial, yInicial, xFinal, yFinal, lineWidth) {
-  lienzoPersonaje.beginPath();
-    // Comienzo
-    lienzoPersonaje.lineWidth = lineWidth; // Define el grosor de la línea.
-    lienzoPersonaje.strokeStyle = color;
-    lienzoPersonaje.moveTo(xInicial, yInicial); // x, y
-  	lienzoPersonaje.lineTo(xFinal, yFinal);
-  	lienzoPersonaje.stroke();
-    // Cierre
-  lienzoPersonaje.closePath();
 }
 
 /**
