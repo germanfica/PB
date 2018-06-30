@@ -6,12 +6,13 @@ max=100;
 
 for (var i = 1; i < max; i++) {
   if(i%3==0) {
-    console.log("Fizz");
+    document.write("Fizz");
   }else if (i%5==0) {
-    console.log("Buzz");
+    document.write("Buzz");
   }else if (i%3==0 && i%5==0) {
-    console.log("FizzBuzz");
+    document.write("FizzBuzz");
   }else {
-    console.log(i);
+    document.write(i);
   }
+  document.write("<br/>");
 }
