@@ -1,8 +1,10 @@
 // Declaración de variables
-var teclas, alturaDibujo, x, y;
+var teclas, alturaDibujo, x, y, personaje, lienzoPersonaje;
 
 // Inicialización de variables
-alturaDibujo = vp.height;
+personaje = document.getElementById("personaje");
+lienzoPersonaje = personaje.getContext("2d");
+alturaDibujo = personaje.height;
 teclas = {
  UP: 38,
  DOWN: 40,
@@ -18,6 +20,10 @@ document.addEventListener("keyup", dibujarPersonaje);
 function dibujarPersonaje(evento) {
   var color = "brown";
   var movimiento = 10;
+
+  // Limpieza del lienzo
+  lienzoPersonaje.clearRect(0, 0, personaje.width, personaje.height);
+
   switch (evento.keyCode) {
     case teclas.UP:
       //console.log(evento.key);
@@ -43,13 +49,13 @@ function dibujarPersonaje(evento) {
 }
 
 function dibujarLinea(color, xInicial, yInicial, xFinal, yFinal, lineWidth) {
-  lienzo.beginPath();
+  lienzoPersonaje.beginPath();
     // Comienzo
-    lienzo.lineWidth = lineWidth; // Define el grosor de la línea.
-    lienzo.strokeStyle = color;
-    lienzo.moveTo(xInicial, yInicial); // x, y
-  	lienzo.lineTo(xFinal, yFinal);
-  	lienzo.stroke();
+    lienzoPersonaje.lineWidth = lineWidth; // Define el grosor de la línea.
+    lienzoPersonaje.strokeStyle = color;
+    lienzoPersonaje.moveTo(xInicial, yInicial); // x, y
+  	lienzoPersonaje.lineTo(xFinal, yFinal);
+  	lienzoPersonaje.stroke();
     // Cierre
-  lienzo.closePath();
+  lienzoPersonaje.closePath();
 }
