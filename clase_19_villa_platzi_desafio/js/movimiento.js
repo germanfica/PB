@@ -27,19 +27,27 @@ function dibujarPersonaje(evento) {
   switch (evento.keyCode) {
     case teclas.UP:
       //console.log(evento.key);
-      dibujarLinea(color, x, y, x, y-movimiento, 3);
+      if(cerdo.cargaOK)
+        lienzoPersonaje.drawImage(cerdo.imagen, x, y-movimiento);
+      //dibujarLinea(color, x, y, x, y-movimiento, 3);
       y=y-movimiento;
       break;
     case teclas.DOWN:
-      dibujarLinea(color, x, y, x, y+movimiento, 3);
+      if(cerdo.cargaOK)
+        lienzoPersonaje.drawImage(cerdo.imagen, x, y+movimiento);
+      //dibujarLinea(color, x, y, x, y+movimiento, 3);
       y=y+movimiento;
       break;
     case teclas.LEFT:
-      dibujarLinea(color, x, y, x-movimiento, y, 3);
+      if(cerdo.cargaOK)
+        lienzoPersonaje.drawImage(cerdo.imagen, x-movimiento, y);
+      //dibujarLinea(color, x, y, x-movimiento, y, 3);
       x=x-movimiento;
       break;
     case teclas.RIGHT:
-      dibujarLinea(color, x, y, x+movimiento, y, 3);
+      if(cerdo.cargaOK)
+        lienzoPersonaje.drawImage(cerdo.imagen, x+movimiento, y);
+      //dibujarLinea(color, x, y, x+movimiento, y, 3);
       x=x+movimiento;
       break;
     default:
