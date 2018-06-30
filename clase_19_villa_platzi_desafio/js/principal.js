@@ -68,8 +68,9 @@ function dibujar() {
     for (var i = 0; i <= aleatorio(3,9); i++) {
       lienzo.drawImage(vaca.imagen, aleatorio(0,420), aleatorio(0,420));
     }
-  //if(cerdo.cargaOK)
-  //  lienzo.drawImage(cerdo.imagen, aleatorio(0,420), aleatorio(0,420));
+  // Crear personaje
+  if(cerdo.cargaOK)
+    lienzoPersonaje.drawImage(cerdo.imagen, x, y);
   if(pollo.cargaOK)
     for (var i = 0; i < aleatorio(3,9); i++) {
       lienzo.drawImage(pollo.imagen, aleatorio(0,420), aleatorio(0,420));

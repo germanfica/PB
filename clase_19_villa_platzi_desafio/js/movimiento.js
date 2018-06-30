@@ -21,10 +21,6 @@ function dibujarPersonaje(evento) {
   var color = "brown";
   var movimiento = 10;
 
-  // Crear personaje
-  if(cerdo.cargaOK)
-    lienzoPersonaje.drawImage(cerdo.imagen, x, y);
-
   switch (evento.keyCode) {
     case teclas.UP:
       limpiarLienzoPersonaje();
