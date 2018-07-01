@@ -13,10 +13,6 @@ var billetes = [
 // output
 50+50+50;
 
-function contar() {
-
-}
-
 function resto(dividendo, divisor) {
   return (dividendo%divisor);
 }
@@ -38,26 +34,10 @@ function retirar(monto) {
 
     if(resto==0 && cantidadDeBilletes>=resto) {
       billetes[i][1] = 0; // Ya no hay billetes
-      aux=true;
+      //aux=true;
     }
     i++;
   }
 }
 
-function retirar2(cantidad) {
-  for(billete of billetes) {
-    console.log(billete);
-    if(cantidad%billete==0) {
-      cantidad = cantidad/billete;
-    }
-    console.log(cantidad);
-    if(cantidad==1) {
-      console.log("Éxito.");
-    }
-  }
-  if(cantidad==1) {
-    console.log("Éxito.");
-  }else {
-    console.log("Error.");
-  }
 }
