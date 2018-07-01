@@ -18,7 +18,7 @@ function contar() {
 }
 
 function resto(dividendo, divisor) {
-  return dividendo%divisor;
+  return (dividendo%divisor);
 }
 
 function retirar(monto) {
@@ -32,7 +32,9 @@ function retirar(monto) {
   while (i<=billetes.length-1 && !aux) {
     var billete = billetes[i][0];
     var cantidadDeBilletes = billetes[i][1];
-    var resto = resto(monto, cantidadDeBilletes);
+    var resto = billete%cantidadDeBilletes;
+
+    console.log("Billete: " + billete + "; Cantidad: " + cantidadDeBilletes + "; Resto: " + resto + ".");
 
     if(resto==0 && cantidadDeBilletes>=resto) {
       billetes[i][1] = 0; // Ya no hay billetes
