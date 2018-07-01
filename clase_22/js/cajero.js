@@ -13,10 +13,6 @@ var billetes = [
 // output
 50+50+50;
 
-function resto(dividendo, divisor) {
-  return (dividendo%divisor);
-}
-
 function retirar(monto) {
   // Declaración de variables
   var aux, i;
@@ -38,6 +34,4 @@ function retirar(monto) {
     }
     i++;
   }
-}
-
 }
