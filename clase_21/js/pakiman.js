@@ -20,9 +20,9 @@ class Pakiman {
   mostrar() {
     //document.write("<image " + 'src="' + this.imagen.src + '""');
     document.body.appendChild(this.imagen);
-    document.write("<br/>" + "Nombre: "+ cauchin.nombre + "<br/>");
-    document.write("Vida: "+ cauchin.vida + "<br/>");
-    document.write("Ataque: "+ cauchin.ataque + "<br/>");
+    document.write("<br/>" + "<strong>Nombre: </strong>"+ cauchin.nombre + "<br/>");
+    document.write("<strong>Vida: </strong>"+ cauchin.vida + "<br/>");
+    document.write("<strong>Ataque: </strong>"+ cauchin.ataque + "<br/>");
   }
 
   hablar() {
