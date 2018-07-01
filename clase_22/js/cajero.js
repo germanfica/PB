@@ -1,12 +1,8 @@
-var billetes = [];
-
-var cincuenta = new Billete(50);
-var veinte = new Billete(20);
-var diez = new Billete(20);
-
-billetes[cincuenta] = 3;
-billetes[veinte] = 2;
-billetes[diez] = 2;
+var billetes = [
+  [50, 3],
+  [20, 2],
+  [10, 2]
+]; // Billete con sus respectivas cantidades
 
 // Tengo que manejar las cantidades
 
@@ -21,9 +17,28 @@ function contar() {
 
 }
 
-function retirar() {
-  for(billete in billetes) {
-    console.log("Billete de: " + billete + "; Cantidad: ");
+function resto(dividendo, divisor) {
+  return dividendo%divisor;
+}
+
+function retirar(monto) {
+  // Declaración de variables
+  var aux, i;
+
+  // Inicialización de variables
+  i=0;
+  aux = false;
+
+  while (i<=billetes.length-1 && !aux) {
+    var billete = billetes[i][0];
+    var cantidadDeBilletes = billetes[i][1];
+    var resto = resto(monto, cantidadDeBilletes);
+
+    if(resto==0 && cantidadDeBilletes>=resto) {
+      billetes[i][1] = 0; // Ya no hay billetes
+      aux=true;
+    }
+    i++;
   }
 }
 
