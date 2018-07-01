@@ -17,6 +17,14 @@ class Pakiman {
     this.imagen.src = url;
   }
 
+  mostrar() {
+    //document.write("<image " + 'src="' + this.imagen.src + '""');
+    document.body.appendChild(this.imagen);
+    document.write("<br/>" + "Nombre: "+ cauchin.nombre + "<br/>");
+    document.write("Vida: "+ cauchin.vida + "<br/>");
+    document.write("Ataque: "+ cauchin.ataque + "<br/>");
+  }
+
   hablar() {
     alert(this.nombre);
   }
