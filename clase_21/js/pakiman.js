@@ -1,4 +1,4 @@
-var imagenes = [];
+//var imagenes = [];
 //imagenes["Cauchin"] = "images/vaca.png";
 //imagenes["Pokacho"] = "images/pollo.png";
 //imagenes["Ceuro"] = "images/cerdo.png";
