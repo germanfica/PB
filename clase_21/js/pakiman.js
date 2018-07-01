@@ -4,4 +4,8 @@ class Pakiman {
     this.vida = vida;
     this.ataque = ataque;
   }
+
+  hablar() {
+    alert(this.nombre);
+  }
 }
