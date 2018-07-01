@@ -9,5 +9,4 @@ pokacho.mostrar();
 
 var ceuro = new Pakiman("Ceuro", 120, 40);
 ceuro.cargarImagen("images/cerdo.png");
-
-console.log(cauchin, pokacho, ceuro);
+ceuro.mostrar();
