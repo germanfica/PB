@@ -27,7 +27,7 @@ class Cajero {
       }
       i++;
     }
-    mostrarMsj(todoOK);
+    this.mostrarMsj(todoOK);
   }
 
   mostrarMsj(todoOK) {
