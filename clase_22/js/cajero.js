@@ -8,7 +8,9 @@ class Cajero {
   }
 
   /**
-    * Reducir la cantidad de billetes en el cajero
+    * Reducir la cantidad de billetes del cajero,
+    * este módulo solo debe ejecutarse cuando
+    * la operación de retirar dinero tuvo éxito.
     */
   modificarCantBilletes(cantUsada) {
     for (var i = 0; i <= cantUsada.length-1; i++) {
