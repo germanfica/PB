@@ -13,35 +13,24 @@ class Cajero {
 
     // Inicialización de variables
     i=0;
+    dineroRestante = monto;
     todoOK = false;
 
     while (i<=this.billetes.length-1 && !todoOK) {
       billete = this.billetes[i][0]; // Billete del cajero
       cantBilletes = this.billetes[i][1]; // Cantidad de billetes del cajero
-      cantBilletesReq = monto/billete; // Catidad de billetes requeridos
-      dineroRestante = monto%billete; // Dinero restante por dar al cliente
+      cantBilletesReq = dineroRestante/billete; // Catidad de billetes requeridos
+      dineroRestante = dineroRestante%billete; // Dinero restante por dar al cliente
 
-      console.log(monto); // Monto que seleccionó el cliente para retirar
-      console.log(cantBilletesReq);
-      console.log(dineroRestante);
-
-      // Si la cantidad de biletes requeridos
-      // es menor a la
-      // cantidad de billetes en el cajero,
-      // entonces ahora el monto será el dinero restante para completar el
-      // monto seleccionado
-      if(cantBilletes>=cantBilletesReq) {
-        monto = dineroRestante; // Dinero restante por dar al cliente
-      }
-
-      if (monto == 0) {
+      if (dineroRestante == 0) {
         todoOK = true;
       }
-
-      //console.log(cantBilletes + " billetes de " + billete + ".")
       i++;
     }
+    mostrarMsj(todoOK);
+  }
 
+  mostrarMsj(todoOK) {
     if(todoOK) {
       console.log("EXCELENTE :D tenga su dinero");
     }else {
