@@ -15,9 +15,8 @@ function retirar(monto) {
     var billete = billetes[i][0];
     var cantBilletes = billetes[i][1];
 
-    console.log("Billete: " + billete);
-    console.log("Cantidad de billetes: " + cantBilletes);
-    
+    console.log("Billete: " + billete + ";" + "Cantidad de billetes: " + cantBilletes);
+
     i++;
   }
 }
