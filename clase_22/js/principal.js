@@ -14,14 +14,17 @@ function retirar(monto) {
   while (i<=billetes.length-1) {
     var billete = billetes[i][0];
     var cantBilletes = billetes[i][1];
-    var cantBilletesNec = monto/billete; // Catidad de billetes necesarios
+    var cantBilletesNec = monto/billete; // Catidad de billetes requeridos
 
     console.log(monto); // Monto que seleccionó el cliente para retirar
     console.log(monto/billete);
     console.log(monto%billete); // Dinero restante por dar al cliente
 
-    // Si la cantidad de biletes necesarios es menos a la cantidad de billetes actuales, entonces esta ecuación determina el residuo de lo que falta para completar el monto seleccionado
-
+    // Si la cantidad de biletes requeridos
+    // es menor a la
+    //cantidad de billetes en el cajero,
+    // entonces ahora el monto será el dinero restante para completar el
+    // monto seleccionado
     if(cantBilletes>=cantBilletesNec) {
       monto = monto%billete; // Dinero restante por dar al cliente
     }
