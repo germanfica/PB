@@ -1,33 +1,23 @@
 var billetes = [
-  50, 50, 50,
-  20, 20,
-  10, 10
-]; // Billete con sus respectivas cantidades
-
-// Tengo que manejar las cantidades
-
-
-// input
-150%50
-
-// output
-50+50+50;
+  [50, 3],
+  [20, 2],
+  [10, 2]
+];
 
 function retirar(monto) {
   // Declaración de variables
-  var i, todoOK;
+  var i;
 
   // Inicialización de variables
   i=0;
-  todoOK = true;
 
-  while (i<=billetes.length-1 && todoOK) {
-    var billete = billetes[i];
-
-    monto = monto - billete;
+  while (i<=billetes.length-1) {
+    var billete = billetes[i][0];
+    var cantBilletes = billetes[i][1];
 
     console.log("Billete: " + billete);
-
+    console.log("Cantidad de billetes: " + cantBilletes);
+    
     i++;
   }
 }
