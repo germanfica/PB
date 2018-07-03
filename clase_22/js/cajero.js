@@ -12,7 +12,7 @@ class Cajero {
     * este módulo solo debe ejecutarse cuando
     * la operación de retirar dinero tuvo éxito.
     */
-  modificarCantBilletes(cantUsada) {
+  darBilletes(cantUsada) {
     for (var i = 0; i <= cantUsada.length-1; i++) {
       this.billetes[i][1] = (this.billetes[i][1]) - (cantUsada[i]);
     }
@@ -34,12 +34,14 @@ class Cajero {
       cantBilletes = this.billetes[i][1]; // Cantidad de billetes del cajero
       cantBilletesReq = (dineroRestante-(dineroRestante%billete))/billete; // Catidad de billetes requeridos
 
+      // Si hay billetes en el cajero entonces
       if(cantBilletes>0) {
         cantBilletesUsad.push(cantBilletesReq); // Almacena las cantidades de billetes usados para concretar la operación
-        dineroRestante = dineroRestante%billete; // Dinero restante por dar al cliente
+        dineroRestante = dineroRestante%billete; // Dinero restante para darle al cliente
+        // Si todo salió bien entonces el usuario puede retirar dinero
         if (dineroRestante == 0) {
           todoOK = true;
-          this.modificarCantBilletes(cantBilletesUsad);
+          this.darBilletes(cantBilletesUsad);
         }
       }
       i++;
