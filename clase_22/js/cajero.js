@@ -16,11 +16,11 @@ class Cajero {
     }
   }
 
-  billetesRequeridos() {
+  billetesNecesarios() {
     
   }
 
-  hayDineroDisponible() {
+  hayBilletes() {
 
   }
 
