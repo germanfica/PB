@@ -23,30 +23,6 @@ class Cajero {
   }
 
   /**
-   * Determina la cantidad de billetes que se necesitan
-   * para darle al cliente
-   */
-  seNecesitan(monto) {
-    // Declaración de variables
-    var cantidadNecesaria, papeles;
-    var billetes = [];
-
-    for (var i = 0; i <= this.billetes.length-1; i++) {
-      cantidadNecesaria = (monto-(monto%this.billetes[i][0]))/this.billetes[i][0]; // Catidad de billetes requeridos
-      //cantidadNecesaria = Math.floor(monto/(this.billetes[i][0])); // Catidad de billetes requeridos
-      if(cantidadNecesaria>this.billetes[i][1]) {
-        papeles = this.billetes[i][1]; // Cantidad de billetes necesarios para darle al cliente
-      }else {
-        papeles = cantidadNecesaria; // Cantidad de billetes necesarios para darle al cliente
-      }
-      billetes.push(papeles); // Cantidad de billetes necesarios para darle al cliente
-      monto = monto%(this.billetes[i][0]*papeles); // Monto restante para completar el monto total solicitado por el cliente
-    }
-
-    return billetes;
-  }
-
-  /**
    * Determina si hay billetes en el cajero
    */
   hayBilletes(billetes) {
@@ -68,6 +44,32 @@ class Cajero {
   }
 
   /**
+   * Determina la cantidad de billetes que se necesitan
+   * para darle al cliente
+   */
+  seNecesitan(monto) {
+    // Declaración de variables
+    var cantidadNecesaria, papeles;
+    var billetes = [];
+
+    for (var i = 0; i <= this.billetes.length-1; i++) {
+      cantidadNecesaria = (monto-(monto%this.billetes[i][0]))/this.billetes[i][0]; // Catidad de billetes requeridos
+      //cantidadNecesaria = Math.floor(monto/(this.billetes[i][0])); // Catidad de billetes requeridos
+      if(cantidadNecesaria>this.billetes[i][1]) {
+        papeles = this.billetes[i][1]; // Cantidad de billetes necesarios para darle al cliente
+      }else {
+        papeles = cantidadNecesaria; // Cantidad de billetes necesarios para darle al cliente
+      }
+      billetes.push(papeles); // Cantidad de billetes necesarios para darle al cliente
+      monto = monto%(this.billetes[i][0]*papeles); // Monto restante para completar el monto total solicitado por el cliente
+      //console.log(papeles);
+      console.log(monto);
+    }
+
+    return billetes;
+  }
+
+  /**
    * Permite que el cliente retire su dinero del cajero
    * (se da por hecho que el banco autoriza esta transacción)
    */
@@ -77,14 +79,14 @@ class Cajero {
 
     // Inicialización de variables
     billetes = this.seNecesitan(monto); // No funciona cuando hay que retirar 210. 4,0,1. Debería 3, 2, 2. Hcaer un diagrama de flujo primero.
-    console.log(this.billetes);
+    //console.log(this.billetes);
     console.log(billetes);
 
-    if(this.hayBilletes(billetes)) {
-      console.log("EXCELENTE :D tenga su dinero.");
-      this.darBilletes(billetes);
-    }else {
-      console.log("No puedo darte la cantidad que me estas pidiendo.");
-    }
+    //if(this.hayBilletes(billetes)) {
+    //  console.log("EXCELENTE :D tenga su dinero.");
+    //  this.darBilletes(billetes);
+    //}else {
+    //  console.log("No puedo darte la cantidad que me estas pidiendo.");
+    //}
   }
 }
