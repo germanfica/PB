@@ -90,7 +90,7 @@ class Cajero {
       this.darBilletes(billetes, monto);
       this.mostrarBilletes(billetes);
     }else {
-      document.getElementById('id_mostrar_billetes').innerHTML = "No puedo darte la cantidad que me estas pidiendo.";
+      document.getElementById('id_mostrar_billetes').innerHTML = document.getElementById('id_mostrar_billetes').innerHTML + "No puedo darte la cantidad que me estas pidiendo." + "<br/>" + "<hr/>";
       console.log("No puedo darte la cantidad que me estas pidiendo.");
     }
   }
@@ -101,9 +101,9 @@ class Cajero {
     texto = "";
 
     for (var i = 0; i <= billetes.length-1; i++) {
-      var texto = texto + billetes[i] + " billetes de " + "<br/>";
+      var texto = texto + billetes[i] + " billetes de " + this.billetes[i][0]  + "<br/>";
     }
-    document.getElementById('id_mostrar_billetes').innerHTML = texto;
+    document.getElementById('id_mostrar_billetes').innerHTML = document.getElementById('id_mostrar_billetes').innerHTML + texto + "<hr/>";
     //document.write(texto);
   }
 }
