@@ -1,5 +1,6 @@
 class Cajero {
   constructor() {
+    // Billetes: Valor del billete, Cantidad de billetes
     this.billetes = [
       [50, 3],
       [20, 2],
