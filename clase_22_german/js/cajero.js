@@ -88,8 +88,21 @@ class Cajero {
     if(this.hayBilletes(billetes, monto)) {
       console.log("EXCELENTE :D tenga su dinero.");
       this.darBilletes(billetes, monto);
+      this.mostrarBilletes(billetes);
     }else {
       console.log("No puedo darte la cantidad que me estas pidiendo.");
     }
+  }
+
+  mostrarBilletes(billetes) {
+    var texto;
+
+    texto = "";
+
+    for (var i = 0; i <= billetes.length-1; i++) {
+      var texto = texto + billetes[i] + " billetes de " + "<br/>";
+    }
+    document.getElementById('id_mostrar_billetes').innerHTML = texto;
+    //document.write(texto);
   }
 }
