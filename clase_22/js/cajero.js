@@ -70,9 +70,9 @@ class Cajero {
     var billetes;
 
     // Inicialización de variables
-    billetes = this.seNecesitan(monto);
+    billetes = this.seNecesitan(monto); // No funciona cuando hay que retirar 210. 4,0,1. Debería 3, 2, 2. Hcaer un diagrama de flujo primero.
     console.log(this.billetes);
-    //console.log(billetes);
+    console.log(billetes);
 
     if(this.hayBilletes(billetes)) {
       console.log("EXCELENTE :D tenga su dinero.");
