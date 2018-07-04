@@ -52,18 +52,20 @@ class Cajero {
    */
   hayBilletes(billetes, monto) {
     // Declaración de variables
-    var i, respuesta, dineroActual;
+    var i, respuesta, dineroActual, dineroNecesario;
 
     // Inicialización de variables
     dineroActual = 0;
+    dineroNecesario = 0;
     respuesta = true;
     i = 0;
 
     for (var i = 0; i <= billetes.length-1; i++) {
       dineroActual = dineroActual + this.billetes[i][0]*this.billetes[i][1];
+      dineroNecesario = dineroNecesario + billetes[i];
     }
 
-    if(monto>dineroActual) {
+    if(monto>dineroActual || dineroNecesario==0) {
       respuesta = false;
     }
 
@@ -80,8 +82,8 @@ class Cajero {
 
     // Inicialización de variables
     billetes = this.seNecesitan(monto); // No funciona cuando hay que retirar 210. 4,0,1. Debería 3, 2, 2. Hcaer un diagrama de flujo primero.
-    console.log(this.billetes);
-    //console.log(billetes);
+    //console.log(this.billetes);
+    console.log(billetes);
 
     if(this.hayBilletes(billetes, monto)) {
       console.log("EXCELENTE :D tenga su dinero.");
