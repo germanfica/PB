@@ -38,7 +38,7 @@ class Cajero {
       if(this.billetes[i][1]>0) {
         billetes.push(cantidadBilletes); // Cantidad de billetes usados para concretar la operación
         dineroRestante = dineroRestante%billete; // Dinero restante para completar el monto que solicitó el cliente
-        // Si todo salió bien entonces el usuario puede retirar dinero
+        // Si todo salió bien entonces dar los billetes al cliente
         if (dineroRestante == 0) {
           todoOK = true;
           this.darBilletes(billetes);
