@@ -59,12 +59,8 @@ class Cajero {
     respuesta = true;
     i = 0;
 
-    while(i<= billetes.length-1 && respuesta) {
-      dineroActual = dineroActual + this.billetes[i][0]*this.billetes[i][1]
-      if((this.billetes[i][1] - billetes[i])<0) {
-        respuesta = false;
-      }
-      i++;
+    for (var i = 0; i <= billetes.length-1; i++) {
+      dineroActual = dineroActual + this.billetes[i][0]*this.billetes[i][1];
     }
 
     if(monto>dineroActual) {
