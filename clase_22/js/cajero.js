@@ -22,24 +22,24 @@ class Cajero {
 
   retirar(monto) {
     // Declaración de variables
-    var i, billete, cantidadBilletes, dineroRestante, todoOK;
+    var i, billete, cantidadNecesaria, montoRestante, todoOK;
     var billetes = [];
 
     // Inicialización de variables
     i=0;
-    dineroRestante = monto;
+    montoRestante = monto;
     todoOK = false;
 
     while (i<=this.billetes.length-1 && !todoOK) {
       billete = this.billetes[i][0]; // Billete del cajero
-      cantidadBilletes = (dineroRestante-(dineroRestante%billete))/billete; // Catidad de billetes requeridos
+      cantidadNecesaria = (montoRestante-(montoRestante%billete))/billete; // Catidad de billetes requeridos
 
       // Si hay billetes en el cajero entonces
       if(this.billetes[i][1]>0) {
-        billetes.push(cantidadBilletes); // Cantidad de billetes usados para concretar la operación
-        dineroRestante = dineroRestante%billete; // Dinero restante para completar el monto que solicitó el cliente
+        billetes.push(cantidadNecesaria); // Cantidad de billetes necesarios para dar al cliente
+        montoRestante = montoRestante%billete; // Monto restante para completar el monto que solicitó el cliente
         // Si todo salió bien entonces dar los billetes al cliente
-        if (dineroRestante == 0) {
+        if (montoRestante == 0) {
           todoOK = true;
           this.darBilletes(billetes);
         }
