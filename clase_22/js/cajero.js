@@ -8,13 +8,12 @@ class Cajero {
   }
 
   /**
-   * Dar al cliente el monto que solicitó
+   * Dar al cliente el monto que solicitó en billetes
+   * ADVERTENCIA: este módulo no verifica si hay billetes en el cajero
    */
   darBilletes(billetes) {
     for (var i = 0; i <= billetes.length-1; i++) {
-      if(this.billetes[i][1]>0) {
-        this.billetes[i][1] = (this.billetes[i][1]) - (billetes[i]);
-      }
+      this.billetes[i][1] = (this.billetes[i][1]) - (billetes[i]);
     }
   }
 
