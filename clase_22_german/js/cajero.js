@@ -90,6 +90,7 @@ class Cajero {
       this.darBilletes(billetes, monto);
       this.mostrarBilletes(billetes);
     }else {
+      document.getElementById('id_mostrar_billetes').innerHTML = "No puedo darte la cantidad que me estas pidiendo.";
       console.log("No puedo darte la cantidad que me estas pidiendo.");
     }
   }
