@@ -23,27 +23,6 @@ class Cajero {
   }
 
   /**
-   * Determina si hay billetes en el cajero
-   */
-  hayBilletes(billetes) {
-    // Declaración de variables
-    var i, respuesta;
-
-    // Inicialización de variables
-    respuesta = true;
-    i = 0;
-
-    while(i<= billetes.length-1 && respuesta) {
-      if((this.billetes[i][1] - billetes[i])<0) {
-        respuesta = false;
-      }
-      i++;
-    }
-
-    return respuesta;
-  }
-
-  /**
    * Determina la cantidad de billetes que se necesitan
    * para darle al cliente
    */
@@ -69,6 +48,33 @@ class Cajero {
   }
 
   /**
+   * Determina si hay suficientes billetes en el cajero
+   */
+  hayBilletes(billetes, monto) {
+    // Declaración de variables
+    var i, respuesta, dineroActual;
+
+    // Inicialización de variables
+    dineroActual = 0;
+    respuesta = true;
+    i = 0;
+
+    while(i<= billetes.length-1 && respuesta) {
+      dineroActual = dineroActual + this.billetes[i][0]*this.billetes[i][1]
+      if((this.billetes[i][1] - billetes[i])<0) {
+        respuesta = false;
+      }
+      i++;
+    }
+
+    if(monto>dineroActual) {
+      respuesta = false;
+    }
+
+    return respuesta;
+  }
+
+  /**
    * Permite que el cliente retire su dinero del cajero
    * (se da por hecho que el banco autoriza esta transacción)
    */
@@ -78,14 +84,14 @@ class Cajero {
 
     // Inicialización de variables
     billetes = this.seNecesitan(monto); // No funciona cuando hay que retirar 210. 4,0,1. Debería 3, 2, 2. Hcaer un diagrama de flujo primero.
-    //console.log(this.billetes);
-    console.log(billetes);
+    console.log(this.billetes);
+    //console.log(billetes);
 
-    //if(this.hayBilletes(billetes)) {
-    //  console.log("EXCELENTE :D tenga su dinero.");
-    //  this.darBilletes(billetes);
-    //}else {
-    //  console.log("No puedo darte la cantidad que me estas pidiendo.");
-    //}
+    if(this.hayBilletes(billetes, monto)) {
+      console.log("EXCELENTE :D tenga su dinero.");
+      this.darBilletes(billetes, monto);
+    }else {
+      console.log("No puedo darte la cantidad que me estas pidiendo.");
+    }
   }
 }
