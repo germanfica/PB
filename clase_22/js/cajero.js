@@ -36,6 +36,9 @@ class Cajero {
     return billetes;
   }
 
+  /**
+   * Determina si hay billetes en el cajero
+   */
   hayBilletes(billetes) {
     // Declaración de variables
     var i, respuesta;
@@ -45,7 +48,7 @@ class Cajero {
     i = 0;
 
     while(i<= billetes.length-1 && respuesta) {
-      if(this.billetes[i][1]<=0) {
+      if((this.billetes[i][1] - billetes[i])<0) {
         respuesta = false;
       }
       i++;
@@ -54,6 +57,10 @@ class Cajero {
     return respuesta;
   }
 
+  /**
+   * Permite que el cliente retire su dinero del cajero
+   * (se da por hecho que el banco autoriza esta transacción)
+   */
   retirar(monto) {
     // Declaración de variables
     var billetes;
