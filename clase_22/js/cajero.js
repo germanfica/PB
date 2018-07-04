@@ -53,17 +53,16 @@ class Cajero {
     var billetes = [];
 
     for (var i = 0; i <= this.billetes.length-1; i++) {
-      cantidadNecesaria = (monto-(monto%this.billetes[i][0]))/this.billetes[i][0]; // Catidad de billetes requeridos
-      //cantidadNecesaria = Math.floor(monto/(this.billetes[i][0])); // Catidad de billetes requeridos
-      if(cantidadNecesaria>this.billetes[i][1]) {
-        papeles = this.billetes[i][1]; // Cantidad de billetes necesarios para darle al cliente
-      }else {
-        papeles = cantidadNecesaria; // Cantidad de billetes necesarios para darle al cliente
+      if(monto>0) {
+        cantidadNecesaria = (monto-(monto%this.billetes[i][0]))/this.billetes[i][0]; // Catidad de billetes requeridos
+        if(cantidadNecesaria>this.billetes[i][1]) {
+          papeles = this.billetes[i][1]; // Cantidad de billetes necesarios para darle al cliente
+        }else {
+          papeles = cantidadNecesaria; // Cantidad de billetes necesarios para darle al cliente
+        }
+        billetes.push(papeles); // Cantidad de billetes necesarios para darle al cliente
+        monto = monto - (this.billetes[i][0] * papeles);
       }
-      billetes.push(papeles); // Cantidad de billetes necesarios para darle al cliente
-      monto = monto%(this.billetes[i][0]*papeles); // Monto restante para completar el monto total solicitado por el cliente
-      //console.log(papeles);
-      console.log(monto);
     }
 
     return billetes;
