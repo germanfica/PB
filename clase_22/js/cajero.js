@@ -16,13 +16,6 @@ class Cajero {
     }
   }
 
-  billetesNecesarios() {
-    // Declaración de variables
-    var billetes = [];
-
-    // Inicialización de variables
-  }
-
   hayBilletes() {
 
   }
