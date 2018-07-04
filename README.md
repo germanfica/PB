@@ -17,3 +17,5 @@ Las tareas de cada clase.
 - [Clase 19 Villa Platzi Desafio](https://germanfica.github.io/PB/clase_19_villa_platzi_desafio "Clase 19 Villa Platzi Desafio")
 - [Clase 20 Fizzbuzz](https://germanfica.github.io/PB/clase_20_fizzbuzz "Clase 20 Fizzbuzz")
 - [Clase 21](https://germanfica.github.io/PB/clase_21 "Clase 21")
+- [Clase 22 Freddy](https://germanfica.github.io/PB/clase_22_freddy "Clase 22 Freddy")
+- [Clase 22 German](https://germanfica.github.io/PB/clase_22_german "Clase 22 German")
