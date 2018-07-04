@@ -28,13 +28,19 @@ class Cajero {
    */
   seNecesitan(monto) {
     // Declaración de variables
-    var cantidadNecesaria;
+    var cantidadNecesaria, papeles;
     var billetes = [];
 
     for (var i = 0; i <= this.billetes.length-1; i++) {
       cantidadNecesaria = (monto-(monto%this.billetes[i][0]))/this.billetes[i][0]; // Catidad de billetes requeridos
-      billetes.push(cantidadNecesaria); // Cantidad de billetes necesarios para darle al cliente
-      monto = monto%this.billetes[i][0]; // Monto restante para completar el monto total solicitado por el cliente
+      //cantidadNecesaria = Math.floor(monto/(this.billetes[i][0])); // Catidad de billetes requeridos
+      if(cantidadNecesaria>this.billetes[i][1]) {
+        papeles = this.billetes[i][1]; // Cantidad de billetes necesarios para darle al cliente
+      }else {
+        papeles = cantidadNecesaria; // Cantidad de billetes necesarios para darle al cliente
+      }
+      billetes.push(papeles); // Cantidad de billetes necesarios para darle al cliente
+      monto = monto%(this.billetes[i][0]*papeles); // Monto restante para completar el monto total solicitado por el cliente
     }
 
     return billetes;
