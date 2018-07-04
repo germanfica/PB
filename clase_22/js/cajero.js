@@ -1,10 +1,14 @@
 class Cajero {
   constructor() {
     // Billetes: Valor del billete, Cantidad de billetes
+    var cincuenta = new Billete(50, 3);
+    var veinte = new Billete(20, 2);
+    var diez = new Billete(10, 2);
+
     this.billetes = [
-      [50, 3],
-      [20, 2],
-      [10, 2]
+      [cincuenta.valor, cincuenta.cantidad],
+      [veinte.valor, veinte.cantidad],
+      [diez.valor, diez.cantidad]
     ];
   }
 
