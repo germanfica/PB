@@ -20,6 +20,7 @@ function darDinero(dinero) {
 function entregarDinero() {
   var t = document.getElementById("dinero");
   dinero = parseInt(t.value);
+
   for(var bi of caja) {
     if(dinero > 0) {
       div = Math.floor(dinero / bi.valor);
