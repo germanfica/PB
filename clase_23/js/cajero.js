@@ -1,52 +1,40 @@
-class Billete
-{
-  constructor(v, c)
-  {
+class Billete {
+  constructor(v, c) {
     this.valor = v;
     this.cantidad = c;
   }
 }
 
-function entregarDinero()
-{
+function darDinero(dinero) {
+  if(dinero > 0) {
+    resultado.innerHTML = "Soy un cajero malo, he sido malo y no puedo darte esa cantidad :(";
+  } else {
+    for(var e of entregado) {
+      if(e.cantidad > 0) {
+        resultado.innerHTML += e.cantidad + " billetes de $" + e.valor + "<br />";
+      }
+    }
+  }
+}
+
+function entregarDinero() {
   var t = document.getElementById("dinero");
   dinero = parseInt(t.value);
-  for(var bi of caja)
-  {
-
-    if(dinero > 0)
-    {
+  for(var bi of caja) {
+    if(dinero > 0) {
       div = Math.floor(dinero / bi.valor);
 
-      if(div > bi.cantidad)
-      {
+      if(div > bi.cantidad) {
         papeles = bi.cantidad;
-      }
-      else
-      {
+      } else {
         papeles = div;
       }
 
       entregado.push( new Billete(bi.valor, papeles) );
       dinero = dinero - (bi.valor * papeles);
     }
-
   }
-
-  if(dinero > 0)
-  {
-    resultado.innerHTML = "Soy un cajero malo, he sido malo y no puedo darte esa cantidad :(";
-  }
-  else
-  {
-    for(var e of entregado)
-    {
-      if(e.cantidad > 0)
-      {
-              resultado.innerHTML += e.cantidad + " billetes de $" + e.valor + "<br />";
-      }
-    }
-  }
+  darDinero(dinero);
 }
 
 var caja = [];
