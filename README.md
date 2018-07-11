@@ -21,4 +21,4 @@ Las tareas de cada clase.
 - [Clase 22 German](https://germanfica.github.io/PB/clase_22_german "Clase 22 German")
 - [Clase 23](https://germanfica.github.io/PB/clase_23 "Clase 23")
 - [Clase 24](https://germanfica.github.io/PB/clase_24 "Clase 24")
-- [Clase 25](https://germanfica.github.io/PB/clase_23 "Clase 25")
+- [Clase 25](https://germanfica.github.io/PB/clase_25 "Clase 25")
