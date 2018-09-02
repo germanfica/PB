@@ -1,0 +1,33 @@
+Agarrar algunas palabras
+en el español o cualquier
+otro idioma y transformarlo
+un poco de acuerdo a algunas
+reglas:
+
+1. Si la palabra termina con "ar",
+se le quitan esas dos letras
+
+platzom("Programar") // Programa
+
+2. Si la palabra inicia con Z,
+se le añade "pe" al final.
+
+platzom("zorro") //zorrope
+platzom("zarpar") //zarppe, por la regla 1
+
+3. Si la palabra traducida tiene 10
+o más letras, se debe partir en dos
+la mitdad y unir con un gión medio
+
+platzom("abecedario") // abece-dario
+
+4. Por último, si la palabra original es
+un palíndromo, ninguna regla anterior cuenta
+y se devuelve la misma palabra
+pero intercalando letras mayúsculas y
+minúsculas.
+
+platzom("sometemos") // SoMeTeMoS
+
+Las condiciones van a ser las
+reglas del lenguaje platzon

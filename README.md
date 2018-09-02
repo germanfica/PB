@@ -1,7 +1,7 @@
-# Programación básica
-Seguimiento del código del Curso de Programación Básica de Platzi.com.
+# Javascript
+Seguimiento de los cursos de Platzi.com
 
-#### Listado de las clases
+#### Programación básica
 Las tareas de cada clase.
 - [Clase 8](https://germanfica.github.io/pb-training/clase_8 "Clase 8")
 - [Clase 9](https://germanfica.github.io/pb-training/clase_ "Clase 9")
@@ -19,3 +19,5 @@ Las tareas de cada clase.
 - [Clase 21](https://germanfica.github.io/pb-training/clase_21 "Clase 21")
 - [Clase 22 German](https://germanfica.github.io/pb-training/clase_22_german "Clase 22 German")
 - [Clase 23](https://germanfica.github.io/pb-training/clase_23 "Clase 23")
+
+# Fundamentos de JavaScript
