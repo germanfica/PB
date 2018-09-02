@@ -20,4 +20,7 @@ Las tareas de cada clase.
 - [Clase 22 German](https://germanfica.github.io/pb-training/clase_22_german "Clase 22 German")
 - [Clase 23](https://germanfica.github.io/pb-training/clase_23 "Clase 23")
 
+#### Profesor
+- [Freddy Vega](https://twitter.com/freddier)
+
 # Fundamentos de JavaScript
