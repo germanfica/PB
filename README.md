@@ -4,7 +4,7 @@ Seguimiento de los cursos de Platzi.com
 #### Programación básica
 Las tareas de cada clase.
 - [Clase 8](https://germanfica.github.io/javascript-training/programacion-basica/clase_8 "Clase 8")
-- [Clase 9](https://germanfica.github.io/javascript-training/programacion-basica/clase_ "Clase 9")
+- [Clase 9](https://germanfica.github.io/javascript-training/programacion-basica/clase_9 "Clase 9")
 - [Clase 11](https://germanfica.github.io/javascript-training/programacion-basica/clase_11 "Clase 11")
 - [Clase 12](https://germanfica.github.io/javascript-training/programacion-basica/clase_12 "Clase 12")
 - [Clase 13](https://germanfica.github.io/javascript-training/programacion-basica/clase_13 "Clase 13")
